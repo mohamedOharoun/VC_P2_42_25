@@ -27,7 +27,7 @@ El programa finalmente muestra una representación gráfica con dos partes: la i
 
 En el resultado final se muestra cómo en las filas superiores se encuentran los valores más altos, ya que ahí se encuentra la región más blanca de la imagen. En medio de la gráfica se observa un descenso relevante debido a zona negra en la región de la nariz. Finalmente hay un nuevo repunte que correspondería a la barbilla del simio.
 
-//PONER IMÁGEN
+![Resultado tarea 1](results/tarea1.png)
 
 ## Tarea II
 Para la realización de esta tarea se aplica un umbralizado sobre la imagen obtenida tras el operador de Sobel, previamente convertida a formato de 8 bits para facilitar el procesamiento. El umbral seleccionado permite destacar los bordes más intensos en la imagen, generando una máscara binaria donde los píxeles relevantes toman el valor 255.
@@ -35,7 +35,8 @@ Para la realización de esta tarea se aplica un umbralizado sobre la imagen obte
 A continuación, se realiza el conteo de píxeles blancos (valor 255) tanto por filas como por columnas. Para cada caso, se calcula el valor máximo de píxeles blancos encontrados en una fila o columna, y se determina el conjunto de filas y columnas cuyo conteo supera el 90% de dicho máximo. Estas posiciones se remarcan sobre la imagen original del mandril utilizando líneas de color (de color verde las verticales, y de azul las horizontales), facilitando la visualización de las zonas con mayor presencia de bordes según Sobel.
 
 En el resultado final se puede comprobar que las líneas se ubican en las posiciones esperadas.
-//IMÁGEN
+
+![Resultado tarea 2](results/tarea2.png)
 
 ## Tarea III
 La tarea consiste en realizar un carrusel de modos aprendidos durante la asignatura. Para ello, además de poder visualizar la imagen original de la webcam, el programa debe ofrecer la posibilidad de cambiar de modo e incluir al menos dos procesamientos diferentes utilizando las funciones de OpenCV trabajadas previamente. La implementación desarrollada incorpora cinco modos que pueden seleccionarse mediante clics de ratón: modo normal, donde se muestra la imagen sin alteraciones; modo en escala de grises, que convierte el flujo de vídeo a tonalidades grises; modo de diferencia, que calcula el cambio entre fotogramas consecutivos para destacar el movimiento en la escena; modo de localización de zonas más claras y oscuras, donde se identifican los píxeles de mayor y menor intensidad dibujando círculos de colores sobre ellos; y finalmente, un modo artístico de estilo “Pop Art”, que reduce la resolución de la imagen en celdas, calcula la intensidad promedio en cada una y genera un patrón de círculos coloreados en función de dicha intensidad. En todos los casos, el programa muestra un texto sobre la ventana indicando el modo activo y permite cambiar de uno a otro con un clic izquierdo, volviendo al modo normal con un clic derecho. Además, el sistema asegura la conversión a formato BGR en aquellos modos donde la salida es en escala de grises. Para finalizar la ejecución, se pulsa la tecla ESC. Este demostrador ejemplifica de forma interactiva distintas técnicas de procesamiento de imagen aprendidas en clase y facilita su exhibición de manera visual y atractiva.
